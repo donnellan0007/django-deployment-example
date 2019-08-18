@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'basicapp/base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    {% if user.is_authenticated %}
+        <h2>Welcome {{ user.username }}!</h2>
+    {% else %}
+        <p>Error: For some reason you're not logged in and are still on the profile page. Now shoo!!</p>
+    {% endif %}
+</div>
+
+{% endblock %}
